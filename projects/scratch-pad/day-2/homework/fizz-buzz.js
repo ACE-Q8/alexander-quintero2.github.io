@@ -12,8 +12,22 @@
 */
 function fizzBuzz() {
     // YOUR CODE GOES BELOW HERE //
+// first we need to start a loop counting from 1 to 100 and the we can start our conditional statement
+    for (var i = 1; i <= 100; i++){ 
+        if (i % 15 === 0){ // if I has a remainder of zero when divied by 15 then it is a multiple of 3 and 5
+            console.log("FizzBuzz"); // log to console
+        }
+        else if (i % 5 === 0){ // if I divided by 5 is 0 then it is a multiple of 5
+            console.log("Buzz");
+        }
+        else if (i % 3 === 0){ // if I divided by 3 is 0 then it is a multiple of 3
+            console.log("Fizz");
+        }
+        else {
+        console.log(i);
+        }
 
-
+    }
 
     // YOUR CODE GOES ABOVE HERE //
 }
