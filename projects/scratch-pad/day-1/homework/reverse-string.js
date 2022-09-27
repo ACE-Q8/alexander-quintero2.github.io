@@ -21,13 +21,15 @@
 
 function reverseString(input) {
     // YOUR CODE GOES BELOW HERE //
-    
-    
-    
-    
+    // Alright so first we make a container variable
+let container = "";
+    // Ok so for this we are going to need a for loop to start at the end of the input param
+    for (let i = input.length - 1; i >= 0; i--){
+       container += input[i];
     // YOUR CODE GOES ABOVE HERE //
 }
-
+return container;
+}
 
 
 
