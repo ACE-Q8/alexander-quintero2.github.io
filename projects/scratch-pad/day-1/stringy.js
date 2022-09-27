@@ -14,7 +14,7 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    
+    return string.length;
 
 
     // YOUR CODE ABOVE HERE //
@@ -25,8 +25,7 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+return string.toLowerCase();
 
     // YOUR CODE ABOVE HERE //
 }
@@ -36,7 +35,7 @@ function toLowerCase(string) {
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-
+return string.toUpperCase();
 
 
     // YOUR CODE ABOVE HERE //
@@ -57,8 +56,7 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-
-
+    return string.toLowerCase().replaceAll(" ", "-")
 
     // YOUR CODE ABOVE HERE //
 }
@@ -77,11 +75,19 @@ function toDashCase(string) {
  */
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
+    // string and char must be made lowercase in order to compare properly
+        // We can assign the lowercase values to variables use later on
+        let lowerCaseString = string[0].toLowerCase();
+        let lowerCaseChar = char.toLowerCase();
 
-    
-
-    // YOUR CODE ABOVE HERE //
+    // Now we make our conditional statement and return true if the values are the same
+    if (lowerCaseString === lowerCaseChar){
+            return true;
+        } // No need for a else statement we can just return false if they're not strictly equal to
+    return false;
 }
+    // YOUR CODE ABOVE HERE //
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -97,9 +103,12 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
-
-
+// Now i think we need a conditional statement to return true if they are strictly equal too
+if (string.endsWith(char.toLowerCase())){
+    return true;
+} else {
+    return false;
+}
     // YOUR CODE ABOVE HERE //
 }
 
@@ -110,8 +119,8 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    // Fairly simple just use the concat operator to add two strings together
+return stringOne += stringTwo;
 
     // YOUR CODE ABOVE HERE //
 }
@@ -129,8 +138,8 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
-
+// Most of the work is already done here, just use the .join method to add the strings together
+return args.join("")
     // YOUR CODE ABOVE HERE //
 }
 
@@ -145,7 +154,12 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    // i think we can just make our conditional and use the .length operator to compare indexes
+if (stringOne.length > stringTwo.length){
+    return stringOne;
+} else {
+    return stringTwo;
+}
 
 
     // YOUR CODE ABOVE HERE //
@@ -160,8 +174,13 @@ function longest(stringOne, stringTwo) {
  */
 function sortAscending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
-
+    if ( stringOne < stringTwo){// determine if stringOne is higher in the alphabet 
+        return 1;
+     } else if (stringOne > stringTwo){ // determine if stringOne is lower in the alphabet
+        return -1;
+     } else { // else we will return 0
+        return 0;
+     }
 
     // YOUR CODE ABOVE HERE //
 }
@@ -176,7 +195,14 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+    // Same thing as before but we're just gonna flip the logic basically
+    if (stringOne < stringTwo){
+        return -1;
+      } else if (stringOne > stringTwo){
+        return 1;
+      } else {
+        return 0;
+      }
 
 
 
