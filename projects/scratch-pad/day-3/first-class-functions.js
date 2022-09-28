@@ -84,8 +84,11 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
     // YOUR CODE BELOW HERE //
-    
-    
+    let arr = []; // Intialize empty array
+    for (let i = 0; i < strings.length; i++){ // Loop over the Strings so we can later pass them into the array
+        arr.push(modify(strings[i])); // push in our modify function with strings as the parameter
+    }
+    return arr;// return modifyed arr
     
     
     // YOUR CODE ABOVE HERE //
@@ -102,7 +105,17 @@ function modifyStrings(strings, modify) {
  */
 function allStringsPass(strings, test) {
     // YOUR CODE BELOW HERE //
-    
+    // Okay so to make this easier lets assign a counting variable to use later on
+    let count = 0;
+    for (let i = 0; i < strings.length; i++){ // Now loop through strings to target each index
+        if (test(strings[i]) === true){ // Pass in strings to our "test" function
+            count += 1;// increase count by one on each iteration 
+        }
+    } if (count === strings.length){ // sepreate if statement when count equals the length of strings
+        return true; // Stop and return true
+    } else {
+        return false; // Else return False
+    }
     
     
     
