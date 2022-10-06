@@ -21,13 +21,14 @@ animal.noises = [];
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 var noises = [];
-noises.push("snore", "bark", "sneeze", "whimper");
-
+noises.push("bark", "sneeze", "whimper");
+noises[0] = 'snore';
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-animal.noises = noises;
-
+animal['noises'] = noises;
+animal.noises.push("growl", "fart");
+console.log(animal);
 
 /* *******************************************************************
  * Step 4 - Review
@@ -51,13 +52,41 @@ animal.noises = noises;
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
-
+ var animals = [];
+ animals.push(animal);
+var duck = { 
+  species: 'duck', 
+  name: 'Jerome', 
+  noises: ['quack', 'honk', 'sneeze', 'woosh'] 
+};
+animals.push(duck);
+var zebra = {
+  species: 'zebra',
+  name: 'Mike',
+  noises: ['Neigh', 'Prrff']
+};
+animals.push(zebra);
+var penguin = {
+  species: 'penguin',
+  name: 'Charlie',
+  noises: ['ohhh yeah baby, thats what we were waiting for!', 'Hey guys' ]
+}
+animals.push(penguin);
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
+var friends = []; // best to use an array to store this function
+
+function getRandom(array) {
+var random = Math.floor(Math.random() * animals.length);
+return random;
+};
+
+friends.push(animals[getRandom()].name)
+animals[1]['friends'] = friends;
+
+console.log(friends) 
 
 
 /**
