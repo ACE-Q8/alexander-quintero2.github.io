@@ -11,24 +11,24 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-var animal = {};
-animal.species = "Dog";
-animal["name"] = "Cat";
-animal.noises = [];
+var animal = {}; // initialze empty object
+animal.species = "Dog"; // dot notation to add the key of species and the value "dog"
+animal["name"] = "Cat"; // bracket notation to add the key of name and the value "cat"
+animal.noises = []; // dot notaton to add the key of noises and the value of an epmty arr
   
 
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-var noises = [];
-noises.push("bark", "sneeze", "whimper");
-noises[0] = 'snore';
+var noises = []; // initialize noises to an empty arr
+noises.push("bark", "sneeze", "whimper");// push three noises
+noises[0] = 'snore';// one with bracket
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-animal['noises'] = noises;
-animal.noises.push("growl", "fart");
-console.log(animal);
+animal['noises'] = noises; // bracket notation to assign the key of noises to our var noises
+animal.noises.push("growl", "fart");// add two more noises
+console.log(animal); // log to the console 
 
 /* *******************************************************************
  * Step 4 - Review
@@ -52,39 +52,39 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 // Step 6 - A Collection of Animals //////////////////////////////////
 //////////////////////////////////////////////////////////////////////
- var animals = [];
- animals.push(animal);
+ var animals = []; // initialize animals to an empty arr
+ animals.push(animal); // push our animal object into animalsd
 var duck = { 
   species: 'duck', 
   name: 'Jerome', 
   noises: ['quack', 'honk', 'sneeze', 'woosh'] 
 };
-animals.push(duck);
+animals.push(duck); // push new objects into animals
 var zebra = {
   species: 'zebra',
   name: 'Mike',
   noises: ['Neigh', 'Prrff']
 };
-animals.push(zebra);
+animals.push(zebra); // push zebra
 var penguin = {
   species: 'penguin',
   name: 'Charlie',
   noises: ['ohhh yeah baby, thats what we were waiting for!', 'Hey guys' ]
 }
-animals.push(penguin);
+animals.push(penguin); // push penguin
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
 var friends = []; // best to use an array to store this function
 
-function getRandom(array) {
-var random = Math.floor(Math.random() * animals.length);
-return random;
+function getRandom(array) { // takes in a array and returns a random
+var random = Math.floor(Math.random() * animals.length); //initalize random to the value of invoking math.random on our array
+return random; // return random index
 };
 
-friends.push(animals[getRandom()].name)
-animals[1]['friends'] = friends;
+friends.push(animals[getRandom()].name) // add random animal name to the friends array
+animals[1]['friends'] = friends; // add friends list to our animal object using bracket notation
 
 console.log(friends) 
 

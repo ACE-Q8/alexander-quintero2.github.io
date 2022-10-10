@@ -14,7 +14,7 @@
  */
 function length(string) {
     // YOUR CODE BELOW HERE //
-    return string.length;
+    return string.length; // use .length to return the length
 
 
     // YOUR CODE ABOVE HERE //
@@ -25,7 +25,7 @@ function length(string) {
  */
 function toLowerCase(string) {
     // YOUR CODE BELOW HERE //
-return string.toLowerCase();
+return string.toLowerCase(); // implement toLowerCase method on string
 
     // YOUR CODE ABOVE HERE //
 }
@@ -35,7 +35,7 @@ return string.toLowerCase();
  */
 function toUpperCase(string) {
     // YOUR CODE BELOW HERE //
-return string.toUpperCase();
+return string.toUpperCase(); // implement toUpperCase method on string
 
 
     // YOUR CODE ABOVE HERE //
@@ -56,7 +56,7 @@ return string.toUpperCase();
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    return string.toLowerCase().replaceAll(" ", "-")
+    return string.toLowerCase().replaceAll(" ", "-") // return the lower-case version of string and replace spaces with a dash
 
     // YOUR CODE ABOVE HERE //
 }
@@ -103,7 +103,7 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
     // YOUR CODE BELOW HERE //
-// Now i think we need a conditional statement to return true if they are strictly equal too
+// I think we need a conditional statement to return true if they are strictly equal too
 if (string.endsWith(char.toLowerCase())){
     return true;
 } else {
@@ -156,9 +156,9 @@ function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     // i think we can just make our conditional and use the .length operator to compare indexes
 if (stringOne.length > stringTwo.length){
-    return stringOne;
+    return stringOne; // return one if greater than two
 } else {
-    return stringTwo;
+    return stringTwo; // return two if greater than one
 }
 
 
@@ -197,11 +197,11 @@ function sortDescending(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     // Same thing as before but we're just gonna flip the logic basically
     if (stringOne < stringTwo){
-        return -1;
+        return -1; // return -1 when one is less than the length of two
       } else if (stringOne > stringTwo){
-        return 1;
+        return 1; // return 1 when one is greater than the length of two
       } else {
-        return 0;
+        return 0; // return 0
       }
 
 

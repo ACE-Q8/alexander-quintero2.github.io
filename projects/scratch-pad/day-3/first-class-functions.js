@@ -13,7 +13,7 @@
  */
 function createGreaterThanFilter(base) {
     // YOUR CODE BELOW HERE //
-   return function(value){
+   return function(value){ // Return a function that tests whether the base is less than the value
     return base < value;
    }
     
@@ -28,7 +28,7 @@ function createGreaterThanFilter(base) {
  */
 function createLessThanFilter(base) {
     // YOUR CODE BELOW HERE //
-    return function(value){ 
+    return function(value){ // return a function that tests whether value is less than base
         return value < base;
     }
     
@@ -44,12 +44,12 @@ function createLessThanFilter(base) {
  */
 function createStartsWithFilter(startsWith) {
     // YOUR CODE BELOW HERE //
-    return function(string){
-        if (string[0].toLowerCase() === startsWith.toLowerCase()){
-            return true;
+    return function(string){// return function that takes in a string and compares it to a startsWith param
+        if (string[0].toLowerCase() === startsWith.toLowerCase()){ // make comparable by forcing lower-case and compare the first letters
+            return true; // if they are the same
         }
     else {
-        return false;
+        return false;// if not
     }
     }
     
@@ -66,8 +66,8 @@ function createStartsWithFilter(startsWith) {
 function createEndsWithFilter(endsWith) {
     // YOUR CODE BELOW HERE //
     return function(string){
-    if (string[string.length - 1].toLowerCase() === endsWith.toLowerCase()){
-        return true;
+    if (string[string.length - 1].toLowerCase() === endsWith.toLowerCase()){ // force lowercase and compare the last index, must use brackets for multiple operators
+        return true; // if they are the same
     } else {
         return false;
         }

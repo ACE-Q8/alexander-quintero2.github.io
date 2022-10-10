@@ -23,7 +23,7 @@ function fizzBuzz() {
         else if (i % 3 === 0){ // if I divided by 3 is 0 then it is a multiple of 3
             console.log("Fizz");
         }
-        else {
+        else { // number is not divisible by 3 or 5
         console.log(i);
         }
 

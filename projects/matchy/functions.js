@@ -52,14 +52,14 @@ function remove(animals, name){
 //////////////////////////////////////////////////////////////////////
 function add(animals, animal){
     var containsAnimal = false; // Boolean variable 
-    for (var i = 0; i < animals.length;i++){
-        if (animals[i].name === animal.name){
-            containsAnimal = true;
+    for (var i = 0; i < animals.length;i++){ // loop through animals
+        if (animals[i].name === animal.name){ // compare the name property at each index to animal name
+            containsAnimal = true; // boolean switch to true
         }
     }
 
-    if (containsAnimal === false){
-        animals.push(animal);
+    if (containsAnimal === false){ // If boolean is still false
+        animals.push(animal);// push animal into animals arr
     }
 
     
